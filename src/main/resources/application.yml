@@ -3,15 +3,26 @@ spring:
   main:
     banner-mode: 'off'
     log-startup-info: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/books
+    password: 123
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    default-schema: public
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.json
 
-jakarta:
-  persistence:
-    jdbc:
-      url: jdbc:postgresql://localhost:5432/library
-      password: 123
-      user: postgres
+server:
+  servlet:
+    context-path: /api
+  port: '8080'
 
-hibernate:
-  show_sql: true
-  format_sql: true
-  highlight_sql: true
+#hibernate:
+#  show_sql: true
+#  format_sql: true
+#  highlight_sql: true
+
+
