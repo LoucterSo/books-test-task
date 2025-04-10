@@ -38,7 +38,7 @@ erDiagram
         integer year
         varchar(100) brand
         bigint stock
-        NUMERIC(10,2) price
+        numeric price
     }
 ```
 
