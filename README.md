@@ -1,4 +1,4 @@
-# Library Test Task
+# Library (Test Task)
 *A web application for managing books*
 
 ## 📌 Table of Contents
